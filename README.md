@@ -18,7 +18,7 @@ This repo intends to help customers to create a EKS Cluster managed by Rancher i
 
 ``` 
   cd eks-by-rancher/
-  aws cloud formation create stack ----stack-name stack-ec2-rancher --template-body file://template.yml --parameters KeyPairName=<YOUR-KEY-PAIR-NAME> --capabilities CAPABILITY_IAM
+  aws cloud formation create stack --stack-name stack-ec2-rancher --template-body file://template.yml --parameters KeyPairName=<YOUR-KEY-PAIR-NAME> --capabilities CAPABILITY_IAM
 ```
 
 - Log into EC2 Instance e run the startup script:
