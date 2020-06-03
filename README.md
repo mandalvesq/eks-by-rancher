@@ -4,6 +4,8 @@ This repo intends to help customers to create a EKS Cluster managed by Rancher r
 
 # Architecture Overview
 
+![architecture](images/architecture.png)
+
 # Requirements
 
 - AWS Account 
@@ -16,7 +18,7 @@ This repo intends to help customers to create a EKS Cluster managed by Rancher r
 - Clone this repo: 
 ` git clone https://github.com/mandalvesq/eks-by-rancher.git `
 
-- Create a KeyPair: https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+- [Create a KeyPair](https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/ec2-key-pairs.html)
 
 - Run Cloudformation on your AWS Account: 
 
@@ -48,22 +50,32 @@ The output must be something like:
 ## Deploy Cluster 
 
 - Click in ADD Cluster 
-[addclusterimage]
+
+![addcluster](images/addcluster.png)
 
 - Choose EKS
-[chooseEKSimage]
+
+![EKS](images/eks.png)
 
 - Choose the region (in this case us-east-1) and put the Access Key and Secret Key (you can get those from CloudFormation Ouputs)
 
+![access](images/accesskey-secretkey.png)
+
 - Choose K8s version
 
-- Choose VPC configurations
+![K8S](images/cluster-k8s.png)
 
-- Choose Cluster Instance type based on your needs.
+- Choose VPC configurations and Instance type based on your needs.
+
+
+![VPC](images/cluster-vpc.png)
 
 - Click Create
 
 - As soon as cluster been deployed, you will see the following page:
+
+![success](images/clustersuccess.png)
+
 
 ## Deploy Workload
 
@@ -71,15 +83,22 @@ The output must be something like:
 
 - Click in Deploy
 
-- Choose the Docker image
+![ClickDeploy](images/clickindeploy.png)
 
+- Choose the Docker image
 - Set port and port type, for this example we will use LB Layer 4
+
+![deploy](images/deploy-workload.png)
 
 - Click in Launch
 
 - After Launch, Go to Load Balancer section and see if the LB is Active
 
+![lb](images/load-balancing.png)
+
 - Return to Workloads and then click in 80/tcp link. It will redirects to the DNS of the AWS Load Balancer.
+
+![](images/80-tcp.png)
 
 - You should be abble to see the example running
 
