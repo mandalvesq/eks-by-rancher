@@ -4,7 +4,7 @@ This repo intends to help customers to create a EKS Cluster managed by Rancher r
 
 # Architecture Overview
 
-![architecture](images/architecture.png)
+![architecture](images/arquitetura.png)
 
 # Requirements
 
