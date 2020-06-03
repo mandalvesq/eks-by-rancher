@@ -1,6 +1,6 @@
-# AWS EKS BY Rancher
+# AWS EKS By Rancher
 
-This repo intends to help customers to create a EKS Cluster managed by Rancher in a EC2 instance.
+This repo intends to help customers to create a EKS Cluster managed by Rancher running in a EC2 instance.
 
 # Architecture Overview
 
